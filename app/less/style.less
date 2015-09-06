@@ -4,7 +4,7 @@
 |-----------------------------------------------------------------------------------------------------------------
 */
 /*Import Fonts*/
-@import url(http://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 @import '../styles/spinner.css';
 /*@import '../styles/animate.css';*/
@@ -17,10 +17,12 @@
 */
 @colBlack: #000000;
 @colGrey: #777;
+@colGreyLight: #F5F5F5;
 @colWhite: #FFFFFF;
-@colRed: #FF1E34;
 @colGreen: #00B2B2;
 @colAqua: #54CFC7;
+@colYellow: #E3A51E;
+@colYellowLight: #FAFAF3;
 
 .fontSansLight {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -34,16 +36,16 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700; /*300, 400, 700*/
 }
-.fontBitterBold {
-	font-family: 'Bitter', serif;
+.fontRobotoBold {
+	font-family: 'Roboto Slab', serif;
 	font-weight: 700;
 }
-.fontBitterReg {
-	font-family: 'Bitter', serif;
+.fontRobotoReg {
+	font-family: 'Roboto Slab', serif;
 	font-weight: 400;
 }
-.fontBitterItalic {
-	font-family: 'Bitter', serif;
+.fontRobotoItalic {
+	font-family: 'Roboto Slab', serif;
 	font-weight: '400italic';
 }
 
@@ -68,7 +70,7 @@
 */
 body {
 	.fontSansReg;
-	font-size: 18px;
+	font-size: 15px;
 	color: @colBlack;
 	/*-webkit-perspective:800;*/
 }
@@ -79,80 +81,71 @@ body {
 }
 .footer {
 	position: relative;
-	top: 610px;
-	padding-top: 10px;
+	top: 0;
+	padding-top: 0;
 }
-.mobile-footer {
-	color: #FFF;
+.home-footer {
+	position: relative;
+	top: 480px;
+	padding-top: 20px;
 }
 .main-container {
-	width: 100%;
 	position: relative;
-	top: 650px;
-	background: @colWhite;
+	top: 550px;
+	background: #FFF;
+	-webkit-transform: translate3d(0,0,0);
+}
+.main-container-secondary {
+	position: relative;
+	top: 50px;
+	background: #FFF;
 	-webkit-transform: translate3d(0,0,0);
 }
 .main-mobile {
 	.main-container;
-	font-size: 24px;
-	background: @colRed;
+	background: @colYellow;
 }
 .banner-home {
 	position: fixed;
-	height: 600px;
-	min-height: 600px;
+	height: 500px;
+	min-height: 500px;
 	width: 100%;
-	color: @colWhite;
-	background: url('../images/BG_Test.png') no-repeat center center #FAFAFA;
+	background: url('../images/BG_Home.png') no-repeat center center #FAFAFA;
+	background: url('../images/BG_Home.png') no-repeat -400px center #FAFAFA;
 	margin: 50px 0 -10px 0;
-	padding: 100px 0 0 0;
+	padding: 60px 0 0 0;
 	text-align: center;
+	display: inline-block;
 }
-.banner-graphics {
-	.banner-home;
-	padding: 290px 0 0 0;
-	background: url('../images/BG_Graphics.png') no-repeat center center @colBlack;
-}
-.banner-websites {
-	.banner-home;
-	padding: 290px 0 0 0;
-	background: url('../images/BG_Websites.png') no-repeat center center @colBlack;
-}
-.banner-mobile {
-	.banner-home;
-	padding: 290px 0 0 0;
-	background: url('../images/AAA.png') no-repeat center center @colGreen;
-}
-.banner-logos {
-	.banner-home;
-	padding: 320px 0 0 0;
-	background: url('../images/BG_Logos.png') no-repeat center center @colBlack;
-}
-.banner-about {
-	.banner-home;
-	padding: 320px 0 0 0;
-	background: url('../images/BG_About.png') no-repeat center center @colBlack;
-}
+.banner-graphics,
+.banner-websites,
+.banner-mobile,
+.banner-logos,
+.banner-about,
 .banner-contact {
 	.banner-home;
-	padding: 290px 0 0 0;
-	background: url('../images/BG_Contact.png') no-repeat center center @colBlack;
 }
+
 .pad {
 	margin: 50px 0 60px 0;
 }
-.content-left {
-	position: relative;
-	margin-bottom: 100px;
-	padding-top: 60px;
-	text-align: center;
+.but-pad {
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
-.content-right {
-	position: relative;
-	margin-bottom: 100px;
-	padding-top: 60px;
+.content-left article {
+	margin: 10px 0 0 0;
+	padding: 40px;
 	text-align: center;
+	border-bottom: dashed 1px @colGrey;
 }
+.content-right article {
+	margin: 10px 0 0 0;
+	padding: 40px;
+	text-align: center;
+	border-bottom: dashed 1px @colGrey;
+}
+
 .article {
 	margin-bottom: 60px;
 }
@@ -165,63 +158,66 @@ body {
 }
 .band {
 	background: @colWhite;
-	padding:50px 0;
+	padding:50px 20px;
 }
 .band-grey {
+	.band;
 	margin: 0;
-	padding: 50px 0;
-	/*background: url('../images/tiny_grid.png') repeat #EEEEEE;*/
-	background: #F5F5F5;
+	background: @colGreyLight;
 }
-.band-red {
-	margin: 0;
-	padding:50px 0;
-	background: @colRed;
+.band-greyDark {
+	.band;
+	margin: -22px 0 0 0;
+	background: #333;
+	background: url('../images/BG/irongrip.png') repeat;
+	p {
+		color: #FFF !important;
+	}
 	h2 {
-		.fontBitterReg;
-		color: @colWhite;
+		color: #FFF;
 	}
 	h4 {
-		.fontSansBold;
-		color: @colWhite;
-	}
-	p {
-		.fontSansLight;
-		color: @colWhite;
+		color: @colYellow;
 	}
 }
-.band-black {
+.band-yellow {
 	.band;
-	background: #222;
-	background: url('../images/carbon_fibre.png') repeat @colBlack;
-	h2, p {
-		color: @colWhite;
+	margin: 0;
+	background: @colYellowLight;
+	h2 {
+		color: @colYellow;
 	}
 }
 .band-video {
-	padding-top: 0;
-	padding-bottom: 50px;
+	.band;
 	background: #000;
 	/*background: url('../images/carbon_fibre.png') repeat @colBlack;*/
 }
 .pros-cons {
 	.fontSansLight;
 	font-size: 16px;
-	background: #F5F5F5;
+	background: #FFF;
 	padding:15px 30px;
-	/*border: solid 1px #EBEBEB;*/
+	border-bottom: solid 1px #CCC;
+	border-radius: 10px;
 	h3 {
 		margin-bottom: 10px;
 	}
+	h4 {
+		.fontRobotoReg;
+	}
 	ul li {
-		margin-bottom: 15px;
+		margin-top: 15px;
+		margin-bottom: 10px;
 	}
 	li {
-		border-radius: 4px;
-		background: #FFF;
-		padding: 10px 10px 10px 30px;
+		color: #333;
+		/*background: lighten(@colYellow, 10%);*/
+		border-top: solid 1px #CCC;
+		padding: 13px 10px 5px 30px;
 		margin-left: -22px;
 	}
+
 }
 .triangle {
 	width: 0;
@@ -229,9 +225,9 @@ body {
 	margin: 0 auto;
 	border-style: solid;
 	border-width: 0 15px 15px 15px;
-	border-color: transparent transparent #F5F5F5 transparent;
+	border-color: transparent transparent #FFFFFF transparent;
 	line-height: 0;
-	_border-color: #000000 #000000 #F5F5F5 #000000;
+	_border-color: #000000 #000000 #FFFFFF #000000;
 	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 /*
@@ -244,55 +240,56 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-top: 10px;
 }
 h1 {
-	.fontBitterReg;
+	.fontRobotoReg;
 	font-size: 36px;
-	color: @colRed;
+	color: @colGrey;
+	letter-spacing: -1.4px;
 }
 h2 {
-	.fontBitterReg;
+	.fontRobotoReg;
 	font-size: 30px;
 	color: @colGrey;
 	letter-spacing: -1.4px;
 }
 h3 {
-	.fontSansReg;
-	font-size: 30px;
-	color: @colRed;
+	.fontRobotoReg;
+	font-size: 26px;
+	color: @colGrey;
 }
 h4 {
-	.fontSansBold;
+	.fontSansReg;
 	font-size: 22px;
-	color: @colRed;
 	margin-bottom: 6px;
 }
 h5 {
-	.fontBitterReg;
+	.fontRobotoReg;
 	font-size: 18px;
-	color: @colRed;
-	margin-bottom: 0;
+	color: @colGrey;
+	line-height: 1.3;
 }
 p {
 	margin-bottom: 20px;
 	color: @colGrey;
 }
 strong {
-	/*font-family: @fontBitterBold;*/
+	/*font-family: @fontRobotoBold;*/
 }
 .banner {
 	h1 {
-		.fontBitterReg;
+		.fontRobotoReg;
 		color: @colWhite;
 		font-size: 50px;
 		letter-spacing: -3px;
 		margin-bottom: 0;
 		text-transform: uppercase;
+		line-height: 1;
 	}
 	h2 {
 		color: @colWhite;
 		.fontSansLight;
 		font-size: 22px;
 		text-transform: uppercase;
-		background: @colRed;
+		background: @colYellow;
 		margin-bottom: 0;
 		padding: 10px 20px;
 		display: inline-block;
@@ -300,27 +297,38 @@ strong {
 	h4 {
 		color: @colWhite;
 		.fontSansLight;
-		font-size: 18px;
-		margin-top: 25px;
+		font-size: 16px;
+		margin-top: 15px;
+	}
+	img {
+		width: 1120px;
+		height: auto;
+		text-align: center;
+		margin: 0 auto;
 	}
 }
 .band-video h3 {
 	font-size: 20px;
 }
 .bold {
-	/*font-family: @fontBitterBold;*/
+	/*font-family: @fontRobotoBold;*/
 }
-.mob-giant {
-	.fontBitterBold;
-	font-size: 100px;
+.giant {
+	.fontRobotoBold;
+	font-size: 40px;
 	color: @colGreen;
-	display: inline;
-	margin-bottom: 40px;
-	/*text-shadow: 4px 4px 0 #DDD;*/
+	margin-bottom: 20px;
+}
+.stats {
+	.fontRobotoBold;
+	font-size: 80px;
+	color: @colGreen;
+	margin-bottom: 20px;
 }
 p.mob-intro {
 	.fontSansLight;
 	font-size: 18px;
+	color: #FFF;
 }
 em {
 	letter-spacing: -.6px;
@@ -348,7 +356,7 @@ em {
 	font-size: 13px;
 	margin-left: -22px;
 	margin-right: 7px;
-	color: @colRed;
+	color: @colYellow;
 	font-family: 'Glyphicons Halflings';
 	content:"\e013";
 }
@@ -356,7 +364,7 @@ em {
 	font-size: 14px;
 	margin-right: 3px;
 	font-family: 'Glyphicons Halflings';
-	color: @colRed;
+	color: @colYellow;
 	content:"\e013";
 }
 .main .cons li:before {
@@ -374,7 +382,7 @@ em {
 |-----------------------------------------------------------------------------------------------------------------
 */
 a {
-	color: @colRed;
+	color: @colYellow;
 	&:hover {
 		color: @colBlack;
 	}
@@ -384,25 +392,34 @@ a:focus {
 	outline: none;
 }
 .navbar-inverse {
-	background: #333;
+	background: #000;
 	border: none;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-	color: @colWhite;
-	background: @colRed;
+	color: #FFF;
+	background: @colYellow;
 }
 .navbar-inverse .navbar-nav > .active > a, 
 .navbar-inverse .navbar-nav > .active > a:hover, 
 .navbar-inverse .navbar-nav > .active > a:focus {
-	color: @colWhite;
-	background: #444;
-	/*border-bottom: solid 1px @colWhite;
-	margin-bottom: -1px;*/
+	color: #FFF;
+	background: @colYellow;
 }
-.navbar-nav > li > a {
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-brand:active {
+	background: url('../images/LD_Logo_Small_a.png') no-repeat center center @colYellow;
+	width: 60px;
+	height: 53px;
+}
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+	background: url('../images/LD_Logo_Small_b.png') no-repeat center center #02050A;
+}
+.navbar-nav > li > a,
+.navbar-nav > li > a:hover {
     font-size: 18px;
-    padding:18px 20px 15px 20px;
+    padding: 18px 15px 10px 15px !important;
 }
 .navbar-inverse .navbar-toggle {
 	border-color: transparent;
@@ -444,7 +461,7 @@ table {
 	color: @colBlack;
 }
 .red {
-	color: @colRed;
+	color: @colYellow;
 }
 .grey {
 	color: @colGrey;
@@ -452,11 +469,8 @@ table {
 .white {
 	color: #FFFFFF;
 }
-.green {
-	color: @colGreen;
-}
-.aqua {
-	color: @colAqua;
+.yellow {
+	color: @colYellow;
 }
 /*
 |-----------------------------------------------------------------------------------------------------------------
@@ -466,11 +480,11 @@ table {
 .btn {
 	/*color: fade(@colWhite, 60%);*/
 	color: #FFF;
-	border-radius: 4px;
+	border-radius: 0;
 	border: none;
-	border-bottom: solid 6px #DDD;
 	margin-bottom: 30px;
 	padding: 7px 20px;
+	border-radius: 100px;
 	&:hover {
 		color:@colWhite;
 		.transition-fast;
@@ -494,19 +508,19 @@ table {
 .btn-black {
 	background: @colBlack;
 	&:hover {
-		background: @colRed;
+		background: @colYellow;
 		.transition-fast;
 	}
 }
 .btn-grey {
 	background: @colGrey;
 	&:hover {
-		background: @colRed;
+		background: @colYellow;
 		.transition-fast;
 	}
 }
 .btn-red {
-	background: @colRed;
+	background: @colYellow;
 }
 
 /*
@@ -515,7 +529,7 @@ table {
 |-----------------------------------------------------------------------------------------------------------------
 */
 .dashed {
-	border-top: dashed 1px @colBlack;
+	border-top: dashed 1px #BBB;
 }
 .dashed-white {
 	border-top: dashed 1px @colWhite;
@@ -536,6 +550,9 @@ table {
 hr.tittle-dashed {
 	display: none;
 }
+hr {
+	margin: 14px 0 -6px 0;
+}
 .right-icon-dot,
 .left-icon-dot {
 	position: absolute;
@@ -546,16 +563,22 @@ hr.tittle-dashed {
 	margin-top: 30px;
 }
 .shadow-large {
-	border: dashed 1px #CCC;
-	border-top: none;
-	/*-webkit-box-shadow: 0 10px 20px 20px #EBEBEB;
-	box-shadow: 0 10px 20px 20px #EBEBEB;*/
+	border: solid 1px #FFF;
+	padding:10px;
+	-webkit-box-shadow: 0 10px 20px 20px #EBEBEB;
+	box-shadow: 0 10px 20px 20px #EBEBEB;
 }
 .video {
 	margin-top:10px;
 	margin-bottom:50px;
 	border: none;
 }
+.back-to-top {
+	margin-top: 50px;
+	text-transform: uppercase;
+}
+
+
 /*
 |-----------------------------------------------------------------------------------------------------------------
 | BOOTSTRAP Overrides
@@ -606,7 +629,15 @@ button:hover
 
 
 
-
+.view-animate-container {
+	position:relative;
+	/*height:100px!important;
+	background:white;
+	border:1px solid black;
+	height:40px;
+	overflow:hidden;*/
+	-webkit-backface-visibility:hidden;
+}
 
 .view-animate {
 	padding:0;
@@ -630,7 +661,7 @@ button:hover
 	padding:0;
 }
 
-/*.view-animate.ng-enter {
+.view-animate.ng-enter {
 	left:100%;
 }
 .view-animate.ng-enter.ng-enter-active {
@@ -638,86 +669,22 @@ button:hover
 }
 .view-animate.ng-leave.ng-leave-active {
 	left:-100%;
-}*/
-
-
-.view-animate.ng-leave {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    -ms-transform-origin: center center;
-    -o-transform-origin: center center;
-    transform-origin: center center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 20;
 }
 
-.view-animate.ng-leave-active {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    z-index: 10;
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
 }
 
-.view-animate.ng-enter {
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    -ms-transform-origin: center center;
-    -o-transform-origin: center center;
-    transform-origin: center center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-}
 
-.view-animate.ng-enter-active {
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    z-index: 20;
-}
+
+
+
+
+
 
 
 
@@ -733,34 +700,47 @@ button:hover
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 368px) and (max-width: 767px) {
+
+	.banner img {
+		width:350px;
+	}
+
+}
+
 /* ALL EXCEPT MOBILE */
 @media (min-width: 768px) {
-	.banner-home {
+
+	.giant {
+		font-size: 80px;
+	}
+
+	.banner {
+		background: url('../images/BG_Home.png') no-repeat -400px center #FAFAFA;
+	}
+
+	.banner-norm {
 		padding: 100px 0 0 0;
 	}
-	.banner-norm {
-		padding: 290px 0 0 0;
-	}
+	.banner-home,
 	.banner-graphics,
+	.banner-mobile,
 	.banner-websites,
 	.banner-logos,
+	.banner-about,
 	.banner-contact {
 		.banner-norm;
 	}
 
-	.banner-mobile,
-	.banner-about {
-		padding: 295px 0 0 0;
-	}
-
-	.content-left {
-		margin-bottom: 0;
-		padding-right: 40px;
+	.content-left article {
+		margin-bottom: 10px;
+		padding: 40px;
 		text-align: center;
 	}
-	.content-right {
-		margin-top: 0;
-		padding-left: 40px;
+	.content-right article {
+		margin-bottom: 10px;
+		padding: 40px;
 		text-align: center;
 	}
 	.right-icon-dot {
@@ -771,18 +751,99 @@ button:hover
 		position: absolute;
 		right:-7px;
 	}
+	hr {
+		margin: -6px 0 -6px 0;
+		height: 0px;
+	}
 	.right-dashed {
-		margin-left: -40px;
+		margin-left: -14px;
 	}
 	.left-dashed {
-		margin-right: -40px;
+		margin-right: -14px;
+	}
+
+	/*
+	|-----------------------------------------------------------------------------------------------------------------
+	| MAIN HEADER NAV BAR - ANIMATED
+	|-----------------------------------------------------------------------------------------------------------------
+	*/
+	.navbar, .navbar-brand {
+		transition: all 0.4s;
+		-moz-transition: all 0.4s; /* Firefox 4 */
+		-webkit-transition: all 0.4s; /* Safari and Chrome */
+		-o-transition: all 0.4s; /* Opera */
+	}
+
+	nav.menu-bar-small.navbar-inverse .navbar-brand, 
+	.navbar-inverse .navbar-brand:active  {
+		background: url('../images/LD_Logo_Small_a.png') no-repeat center center @colYellow;
+		width: 60px;
+		height: 53px;
+	}
+
+	nav.menu-bar-large.navbar-inverse .navbar-brand, 
+	.navbar-inverse .navbar-brand:active  {
+		background: url('../images/LD_Logo_Large_a.png') no-repeat center center @colYellow;
+		width: 90px;
+		height: 81px;
+		margin-top:-14px;
+	}
+
+	nav.menu-bar-small.navbar-inverse .navbar-brand:hover, 
+	.navbar-inverse .navbar-brand:focus .navbar-brand:active {
+		background: url('../images/LD_Logo_Small_b.png') no-repeat center center #02050A;
+		margin-top:0;
+	}
+
+	nav.menu-bar-large.navbar-inverse .navbar-brand:hover, 
+	.navbar-inverse .navbar-brand:focus .navbar-brand:active {
+		background: url('../images/LD_Logo_Large_b.png') no-repeat center center #02050A;
+	}
+
+	nav.menu-bar-small {
+		min-height: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	nav.menu-bar-large {
+		min-height: 80px;
+		padding: 14px 20px 0 20px;
+	}
+
+	.menu-bar {
+		min-height: 80px;
+		padding: 18px 20px 16px 20px;
+	}
+
+	/*
+	|-----------------------------------------------------------------------------------------------------------------
+	| ENDS  MAIN HEADER NAV BAR - ANIMATED
+	|-----------------------------------------------------------------------------------------------------------------
+	*/
+
+
+	.navbar-inverse {
+		background: #FFF;
+		border-bottom: solid 1px #CCC;
+	}
+
+	.navbar-inverse .navbar-nav > li > a:hover,
+	.navbar-inverse .navbar-nav > li > a:focus {
+		color: @colGrey;
+		background: #FFF;
+		border-bottom: solid 5px @colYellow;
+		padding: 18px 20px 10px 20px;
 	}
 	.navbar-inverse .navbar-nav > .active > a, 
 	.navbar-inverse .navbar-nav > .active > a:hover, 
 	.navbar-inverse .navbar-nav > .active > a:focus {
-		border-bottom: solid 1px @colWhite;
-		margin-bottom: -1px;
+		color: @colGrey;
+		background: #FFF;
+		border-bottom: solid 5px @colYellow;
+		padding: 18px 20px 10px 20px;
 	}
+
 	.vs {
 		margin-top: 180px;
 	}
@@ -802,7 +863,7 @@ button:hover
 		font-size: 34px;
 	}
 	h3 {
-		font-size: 30px;
+		font-size: 26px;
 	}
 	.banner {
 		h1 {
@@ -812,8 +873,9 @@ button:hover
 			font-size: 28px;
 		}
 		h4 {
-			font-size: 22px;
+			font-size: 18px;
 		}
+
 	}
 	.dashed-vert {
 		background: url('../images/vert_dash_page.png') repeat-y center 170px;
@@ -831,7 +893,7 @@ button:hover
 		font-size: 38px;
 	}
 	h3 {
-		font-size: 30px;
+		font-size: 26px;
 	}
 	
 	.banner {
@@ -842,7 +904,7 @@ button:hover
 			font-size: 28px;
 		}
 		h4 {
-			font-size: 22px;
+			font-size: 18px;
 		}
 	}
 	.dashed-vert {
@@ -854,6 +916,10 @@ button:hover
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+	.banner {
+		background: url('../images/BG_Home.png') no-repeat center center #FAFAFA;
+	}
+	
 	h1 {
 		font-size: 42px;
 	}
@@ -861,34 +927,34 @@ button:hover
 		font-size: 42px;
 	}
 	h3 {
-		font-size: 30px;
+		font-size: 26px;
+	}
+	.giant {
+		font-size: 80px;
 	}
 	.dashed-vert {
 		background: url('../images/vert_dash_page.png') repeat-y center top;
 	}
 	.banner {
 		h1 {
-			.fontBitterReg;
-			color: @colWhite;
+			.fontRobotoReg;
 			font-size: 100px;
 			letter-spacing: -3px;
 			margin-bottom: 0;
 			text-transform: uppercase;
 		}
 		h2 {
-			color: @colWhite;
 			.fontSansLight;
 			font-size: 32px;
 			text-transform: uppercase;
-			background: @colRed;
+			background: @colYellow;
 			margin-bottom: 0;
 			padding: 10px 20px;
 			display: inline-block;
 		}
 		h4 {
-			color: @colWhite;
 			.fontSansLight;
-			font-size: 22px;
+			font-size: 25px;
 		}
 	}
 	.band,

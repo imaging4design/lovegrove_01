@@ -3,11 +3,15 @@
 
 		<div class="row">
 			<div class="col-sm-12">
+				
 				<div ng-if="banner.image">
-					<img src="images/{{banner.image}}" class="wow lightSpeedIn">
+					<img ng-src="images/{{banner.image}}" class="banner-image wow lightSpeedIn img-responsive hidden-xs">
 				</div>
-				<h1 class="wow lightSpeedIn">{{banner.title}}</h1>
-				<h2>{{banner.tagline}}</h2>
+				<div ng-if="banner.imageXS">
+					<img ng-src="images/{{banner.imageXS}}" class="banner-image-small wow lightSpeedIn img-responsive visible-xs">
+				</div>
+				<!-- <h1 class="wow lightSpeedIn">{{banner.title}}</h1> -->
+				<!-- <h2>{{banner.tagline}}</h2> -->
 				<h4>{{banner.description}}</h4>
 			</div>
 

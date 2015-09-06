@@ -1,18 +1,146 @@
 <a id="top-scroll" name="top"></a>
-<div ng-include="'views/banners/banner.html'"></div>
 
 <!-- CONTACT US -->
-<div class="main-mobile">
+<div class="main-container-secondary">
 
-	<div class="band-black">
+	<div class="band">
+		<div class="container bg">
 
+			<div class="row">
+				<div class="col-sm-12 text-center">
+
+					<h1 class="giant">The Mobile Web</h1>
+
+					<h2 class="grey">Mobile Apps vs <br class="visible-xs"> Mobile Websites</h2>
+				</div>
+			</div><!--ENDS row-->
+
+			<div class="row">
+				<br>
+				<div class="col-sm-5 text-center wow bounceInLeft">
+					<img ng-src="images/web/web_app.png" class="img-icon img-responsive center-block" alt="apps" spinner-on-load>
+					<h2 class="grey">Mobile Apps</h2>
+					<h5>Brief overview</h5>
+					<p>
+						A mobile app is a smartphone or tablet application (programme). Unlike a mobile website, a mobile app must be downloaded and installed, typically from an app marketplace, such as the Apple App Store or Android's Google Play store. Native mobile app's are built specifically for the intended device and leverage the devices core functions like geolocators and accelerometers etc.
+					</p>
+
+					<a ng-click="mobApp = !mobApp;" class="btn btn-sm btn-grey">PROS AND CONS</a>
+
+					<div ng-if="mobApp">
+						<div class="triangle wow bounceInLeft"></div>
+						<div class="pros-cons wow bounceInLeft" data-wow-offset="10">
+							<h4 class="yellow">- Positives -</h4>
+							<ul class="pros">
+								<li> 
+									Since native apps work with the device's built-in features, they are easier to work with and also perform faster on the device.
+								</li>
+								<li>
+									Native apps get full support from the concerned app stores and marketplaces. Users can easily find and download apps of their choice from these stores.
+								</li>
+								<li>
+									Because these apps have to get the approval of the app store they are intended for, the user can be assured of complete safety and security of the app.
+								</li>
+								<li>
+									Native apps work out better for developers, who are provided the SDK and all other tools to create the app with much more ease.
+								</li>
+							</ul>
+
+							<h4 class="grey">- Negatives -</h4>
+							<ul class="cons">
+								<li>
+									Native apps tend to be a more expensive proposition to the developer. This is especially the case for developers who would like their app to be compatible with multiple mobile devices and platforms.
+								</li>
+								<li>
+									The cost of app maintenance and app updates is also higher for native apps, especially if this app supports more than one mobile platform.
+								</li>
+								<li>
+									The process of getting the app approved at the app store can prove to be long and tedious for the developer and need not always result in success. Also, there is no guarantee that the app becomes instantly popular with users.
+								</li>
+								<li>
+									Users of different mobile devices may be using different versions of the app, which makes it difficult for the developer to maintain and offer support.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+				</div><!-- ENDS col -->
+
+				<div class="col-sm-2 text-center">
+					<img ng-src="images/icon_vs.png" class="img-icon img-responsive center-block vs" alt="icon" spinner-on-load>
+				</div><!-- ENDS col -->
+
+				<div class="col-sm-5 text-center wow bounceInRight">
+					<img ng-src="images/web/web_website.png" class="img-icon img-responsive center-block" alt="websites" spinner-on-load>
+					<h2 class="grey">Mobile Websites</h2>
+					<h5>Brief overview</h5>
+					<p>
+						A mobile website is designed specifically for the smaller screens of smartphones and tablets. It can be accessed using any mobile device's Web browser. Users simply type in the URL or click on a link to your website, and the website automatically detects the mobile device and reflows the content and layout to suit the screen size. They are usually built in conjunction with a full screen site.
+					</p>
+					<a ng-click="mobApp = !mobApp;" class="btn btn-sm btn-grey">PROS AND CONS</a>
+
+					<div ng-if="mobApp">
+						<div class="triangle wow bounceInRight"></div>
+						<div class="pros-cons wow bounceInRight" data-wow-offset="10">
+							<h4 class="yellow">- Positives -</h4>
+							<ul class="pros">
+								<li>
+									Web apps are much easier to maintain, as they have a common code base across multiple mobile platforms.
+								</li>
+								<li>
+									Web apps can be manipulated so as to be made compatible with any older mobile device.
+								</li>
+								<li>
+									Web apps do not require developers to submit their app to any app store for approval. Of course, the Apple App Store does feature a list of Web apps.
+								</li>
+								<li>
+									Since Web apps do not need to be approved by the app marketplace, they can be released at any time and in any form, as per the developer's preferences.
+								</li>
+								<li>
+									Users need not bother with visiting an app store to download Web apps or updating the same on their mobile devices.
+								</li>
+							</ul>
+
+							<h4 class="grey">- Negatives -</h4>
+							<ul class="cons">
+								<li>
+									Mobile Web apps only have limited scope as far as accessing a mobile device's features is concerned.
+								</li>
+								<li>
+									Web apps that support multiple mobile browsers can prove to be an expensive proposition for developers, as it raises the costs of developing and maintaining them.
+								</li>
+								<li>
+									Different users work with different mobile browsers. This can make it difficult for you to maintain a record of their usage patterns and also provide support for all of them.
+								</li>
+								<li>
+									Users may sometimes find it difficult to discover a Web app, as it is not systematically listed in any app store.
+								</li>
+								<li>
+									Since there is no regularized quality control system for Web apps, users may not always be guaranteed safety and security of the app.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div><!-- ENDS col -->
+
+			</div><!-- ENDS row -->
+		</div><!-- ENDS conatiner -->
+	</div><!-- ENDS band -->
+	
+
+
+	<div class="band-grey">
 		<div class="container">
 
 			<!-- MOBILE WEB NUMBERS -->
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h1 class="green wow bounceInRight">Are you ready for the mobile world?</h1>
-					<p class="mob-intro wow bounceInLeft">
+					<br>
+					<h1 class="wow bounceInRight">Are you ready for the mobile world?</h1>
+					<img src="images/stars.png">
+					<p class="wow bounceInLeft">
 						As the uptake of mobile devices like smartphones and tablets continues to rise, tasks that were once the domain of desktops (i.e. web browsing) are now being performed with ease and sometimes preference on these smaller portable devices. And it's not just surfing the web, it's everything from browsing social media platforms, checking emails, booking reservations to online shopping.
 
 						Mobile internet usage is steadily increasing and it's very important that your website is mobile friendly and able to engage your users' on their preferred devices. In fact, think '<strong>mobile first</strong>' - it's here and here to stay!
@@ -20,96 +148,73 @@
 				</div><!-- ENDS col -->
 			</div><!-- ENDS row -->
 
-			<div class="pad"></div>
+		</div><!-- ENDS container -->
+	</div><!-- ENDS band-grey -->
 
-			<hr class="dashed-grey">
+
+
+	<div class="band">
+		<div class="container">
 
 			<!-- MOBILE WEB NUMBERS -->
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2>The mobile web in numbers!</h2>
-					<p class="hidden-xs">&nbsp;</p>
+					<h2 class="grey">The mobile web in numbers!</h2>
+					<br>
 				</div><!-- ENDS col -->
 			</div><!-- ENDS row -->
 
-
-
-			<div class="row">
-
-				<div class="col-sm-12 text-center">
-
-					
-					<img src="images/mobile/mob_stats_01.png" class="img-responsive center-block wow bounceIn" data-wow-offset="10">
-					<p>
-						was the year 'mobile' users out-numbered desktop users!
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-
-					<img src="images/mobile/mob_stats_02.png" class="img-responsive center-block wow bounceIn">
-					<p>
-						of all web traffic is now contributed to 'mobile' users and it's growing ... fast!
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-
-					<img src="images/mobile/mob_stats_03.png" class="img-responsive center-block wow bounceIn">
-					<p>
-						of all adults think a company's 'mobile' website should be as good or better than their desktop version!
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-
-					<img src="images/mobile/mob_stats_04.png" class="img-responsive center-block wow bounceIn">
-					<p>
-						of tablet users have purchased online via their 'tablet' device in the last 30 days.
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-
-					<img src="images/mobile/mob_stats_05.png" class="img-responsive center-block wow bounceIn">
-					<p>
-						of users said that if a site didn't work well on their smartphone, they didn't feel the company took their online presence seriously. 
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-
-					<img src="images/mobile/mob_stats_06.png" class="img-responsive center-block wow bounceIn">
-					<p>
-						of users are more likely to make a purchase with a phone / tablet device if the site has been optimised for their 'mobile' platform. 
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-
-					<img src="images/mobile/mob_stats_07.png" class="img-responsive center-block wow bounceIn">
-					<p>
-						smartphone and tablet users were surveyed by Google, 48% reported discontent with websites that were not optimised for mobie devices. 
-					</p>
-
-					<div class="pad"></div>
-					<hr class="dashed-grey pad visible-xs">
-					
-					<h2>
-						Are you ready ... 
-					</h2>
-					<h3>
-						<span class="grey"> for your mobile web customers?</span>
-					</h3>
-
+			<div class="row text-center">
+				<div class="col-sm-6">
+					<div class="stats">2014</div>
+					<h5>was the year 'mobile' users out-numbered desktop users!</h5>
 				</div>
+				<div class="col-sm-6">
+					<div class="stats">16%</div>
+					<h5>of all web traffic is now contributed to 'mobile' users and it's growing ... fast!</h5>
+				</div>
+			</div><!--ENDS row-->
 
-				<button class="btn btn-sm btn-grey back-to-top center-block" scroll-to-item scroll-to="#top-scroll">Back to Top</button><!-- directive - BACK TO TOP -->
+			<div class="row text-center">
+				<div class="col-sm-6">
+					<div class="stats">85%</div>
+					<h5>of all adults think a company's 'mobile' website should be as good or better than their desktop version!</h5>
+				</div>
+				<div class="col-sm-6">
+					<div class="stats">69%</div>
+					<h5>of tablet users have purchased online via their 'tablet' device in the last 30 days.</h5>
+				</div>
+			</div><!--ENDS row-->
 
-			</div><!-- ENDS row -->
-		</div><!-- ENDS conatiner -->
-	</div><!-- ENDS band-grey -->
+			<div class="row text-center">
+				<div class="col-sm-6">
+					<div class="stats">48%</div>
+					<h5>of users said that if a site didn't work well on their smartphone, they didn't feel the company took their online presence seriously.</h5>
+				</div>
+				<div class="col-sm-6">
+					<div class="stats">67%</div>
+					<h5>of users are more likely to make a purchase with a phone / tablet device if the site has been optimised for their 'mobile' platform.</h5>
+				</div>
+			</div><!--ENDS row-->
+
+			<div class="row text-center">
+				<div class="col-sm-6">
+					<div class="stats">5380</div>
+					<h5>smartphone and tablet users were surveyed by Google, 48% reported discontent with websites that were not optimised for mobie devices.</h5>
+				</div>
+				<div class="col-sm-6">
+					<div class="stats hidden-xs">&nbsp;</div>
+					<h2>Are You Ready?</h2>
+				</div>
+			</div><!--ENDS row-->
+
+			<button class="btn btn-sm btn-grey back-to-top center-block" scroll-to-item scroll-to="#top-scroll">Back to Top</button><!-- directive - BACK TO TOP -->
+
+			
+		</div><!-- ENDS container -->
+	</div><!-- ENDS band -->
+
 
 </div><!-- ENDS main-container -->
 
-<div ng-include="'views/banners/footer.html'"class="mobile-footer"></div>
+<div ng-include="'views/banners/footer.html'"></div>

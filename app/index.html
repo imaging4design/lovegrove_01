@@ -2,10 +2,10 @@
 <html class="no-js">
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Lovegrove Design</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
-		 <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0">
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<!-- build:css(.) styles/vendor.css -->
@@ -35,7 +35,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#/home"><img src="images/icon_squares.png"></a>
+					<a class="navbar-brand" href="#/home"></a>
 				</div>
 
 				<!-- Dynamically get menu names from menuCtrl -->
@@ -52,18 +52,16 @@
 			</div>
 		</nav>
 
-		<!-- ADD a commment here for git -->
+		
 		
 		
 
 
 		<!-- ADD MAIN CONTENT HERE -->
 		<div class="view-animate-container">
-			 <div ng-view="" class="main view-animate ng-cloak" ng-cloak autoscroll ></div> 
-
+			<!-- <div ng-view="" class="main view-animate ng-cloak" ng-cloak autoscroll ></div> -->
+			<div ng-view="" class="main view-animate" autoscroll></div>
 		</div>
-
-		
 		
 
 		
@@ -79,6 +77,8 @@
 			 ga('create', 'UA-7102098-19');
 			 ga('send', 'pageview');
 		</script>
+
+		
 
 		<!-- build:js(.) scripts/oldieshim.js -->
 		<!--[if lt IE 9]>
@@ -102,11 +102,12 @@
 		<!-- endbower -->
 		<!-- endbuild -->
 
-				<!-- build:js({.tmp,app}) scripts/scripts.js -->
-				<script src="scripts/app.js"></script>
-				<script src="scripts/controllers/main.js"></script>
-				<script src="scripts/controllers/about.js"></script>
-				<!-- endbuild -->
+		<!-- build:js({.tmp,app}) scripts/scripts.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/misc.js"></script>
+		<!-- endbuild -->
 
+	
 </body>
 </html>

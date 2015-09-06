@@ -1,5 +1,6 @@
 'use strict';
 /*global $:false */
+/*jshint unused:false*/
 /**
  * @ngdoc function
  * @name myApp.controller:MainCtrl
@@ -19,10 +20,11 @@ var myApp = angular.module('myApp')
 		//Dynamic banner content
 		$scope.banner = {
 			divClass: 'banner-home',
-			image: 'A1.png',
+			image: 'header_V1.svg',
+			imageXS: 'header_V2.svg',
 			title: 'Lovegrove Design',
 			tagline: 'Creative Digital and Print',
-			description: 'Achieve a clean, professional look with your print and digital media and launch your message with power and clear direction.'
+			description: 'Professional, print and digital media design.'
 		};
 
 		// Inject WOW.js
@@ -32,9 +34,25 @@ var myApp = angular.module('myApp')
 		});
 		wow.init();
 
-		console.log('MainCtrl');
-		
+		//console.log('MainCtrl');
+
+
+		// PARALAX SCROLL EFFECT - BANNER
+		// Paralax scroll the title over the background image on main banner
+		function parallax() {
+
+			var bannerTitleLarge = document.querySelector('.banner-image');
+			bannerTitleLarge.style.marginTop = -(window.pageYOffset / 2)+'px';
+
+			var bannerTitleSmall = document.querySelector('.banner-image-small');
+			bannerTitleSmall.style.marginTop = -(window.pageYOffset / 2)+'px';
+
+		}
+
+		window.addEventListener('scroll', parallax, false);
+
 	});
+
 
 
 // WEBSITE CONTROLLER
@@ -46,6 +64,8 @@ angular.module('myApp')
 		//Dynamic banner content
 		$scope.banner = {
 			divClass: 'banner-websites',
+			// image: 'header_V1.svg',
+			// imageXS: 'header_V2.svg',
 			title: 'Website Design',
 			tagline: 'Creative Digital and Print',
 			description: 'Professional, modern web design with full responsive behaviour for all of todays modern devices.'
@@ -54,11 +74,12 @@ angular.module('myApp')
 		// Inject WOW.js
 		var wow = new WOW({
 			animateClass: 'animated',
-			offset: 200
+			offset: 50
 		});
 		wow.init();
 
-		console.log('WebCtrl');
+		//console.log('WebCtrl');
+
 	});
 
 
@@ -79,11 +100,12 @@ angular.module('myApp')
 		// Inject WOW.js
 		var wow = new WOW({
 			animateClass: 'animated',
-			offset: 200
+			offset: 50
 		});
 		wow.init();
 
-		console.log('MobCtrl');
+		//console.log('MobCtrl');
+
 	});
 
 
@@ -108,7 +130,8 @@ angular.module('myApp')
 		});
 		wow.init();
 
-		console.log('GraphicCtrl');
+		//console.log('GraphicCtrl');
+
 	});
 
 
@@ -133,7 +156,8 @@ angular.module('myApp')
 		});
 		wow.init();
 
-		console.log('LogoCtrl');
+		//console.log('LogoCtrl');
+
 	});
 
 
@@ -158,7 +182,8 @@ angular.module('myApp')
 		});
 		wow.init();
 
-		console.log('AboutCtrl');
+		//console.log('AboutCtrl');
+
 	});
 
 
@@ -176,7 +201,8 @@ angular.module('myApp')
 			description: 'We welcome your enquiry and are happy to discuss your next web or graphic design project.'
 		};
 
-		console.log('LogoCtrl');
+		//console.log('LogoCtrl');
+		
 	});
 
 
@@ -221,6 +247,21 @@ myApp.directive('scrollToItem', function() {
     };
 });
 
+// Scroll To directive - scrolls to a position on page
+// myApp.directive('scrollToItem', function() {                                                      
+// 	return {
+// 		restrict: 'A',
+// 		scope: {
+// 			scrollTo: '@'
+// 		},
+// 		link: function(scope, $elm) {
+// 			$elm.on('click', function() {
+// 				$('html,body').animate({scrollTop: $(scope.scrollTo).offset().top - $(window).scrollTop() }, 'slow');
+// 			});
+// 		}
+// 	};
+// });
+
 
 //Fade in Page
 myApp.directive('fadePage', function() {
@@ -254,3 +295,4 @@ myApp.directive('spinnerOnLoad', function() {
 		}
 	};
 });
+
