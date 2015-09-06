@@ -20,18 +20,6 @@
 	window.addEventListener('scroll', menuBarResize, false);
 
 
-
-
-
-	// PARALAX SCROLL EFFECT - BANNER
-	// Paralax scroll the title over the background image on main banner
-
-
-
-	
-
-	
-
 	
 }());
 
