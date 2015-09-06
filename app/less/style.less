@@ -231,6 +231,9 @@ body {
 	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
+.band-no-gutters {
+	margin:0 15px;
+}
 .row.no-gutters > [class^="col-"],
 .row.no-gutters > [class*=" col-"] {
 	padding-right: 0;
@@ -463,6 +466,7 @@ figure {
 	/*float: left; */
 	overflow: hidden; 
 	/*margin: 0 20px 20px 0;*/ 
+	padding: 40px;
 } 
 figcaption { 
 	position: absolute; 
@@ -484,13 +488,13 @@ figcaption {
 		color: #FFF;
 		margin-bottom: 1px;
 	}
-} 
+}
 figure:hover figcaption { 
 	opacity: 1;
-	padding-top: 27%;
-} 
+	padding-top: 32%;
+}
 figure:before { 
-	content: "?"; 
+	content: " "; 
 	position: absolute; 
 	font-weight: 800; 
 	background: black; 
@@ -628,6 +632,9 @@ hr.tittle-dashed {
 }
 hr {
 	margin: 14px 0 -6px 0;
+}
+hr.websites {
+	margin: 40px 0;
 }
 .right-icon-dot,
 .left-icon-dot {
