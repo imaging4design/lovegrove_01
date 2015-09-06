@@ -1,0 +1,288 @@
+<a id="top-scroll" name="top"></a>
+<div ng-include="'views/banners/banner.html'"></div>
+
+<!-- WESBITES -->
+<div class="main-container">
+	<div class="band-grey">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-12 text-center wow bounceInUp">	
+
+					<h2>The challenge of today's modern website</h2>
+					<p>
+						Creating a new website today takes a slight mental adjustment. We now have to think of all the different platforms your site might be viewed from. Once apon a time it was simply the humble desktop, now days your audience will more than likely be finding you from a phone or tablet device. So what does this mean? Take your current website for example, if it's been around for a few years, its likely to be a fixed width site that gets shrunk down when viewed on a mobile device. This means a lot of frustrating zoom in / zoom out behaviour for your viewers - far from ideal! <br class="visible-lg"> 
+					</p>
+					<h4 class="grey">
+						What are the mobile web user statistics?<br><br> <a href="#/mobile" class="btn btn-sm btn-grey">READ MORE</a>
+					</h4>
+					<img ng-src="images/web/Responsive_02.png" class="img-responsive center-block" alt="responsive website design" spinner-on-load>
+
+				</div><!-- ENDS col -->
+			</div><!-- ENDS row -->
+		</div><!-- ENDS conatiner -->
+	</div><!-- ENDS band-grey -->
+
+
+	<div class="container extra-pad bg">
+
+		<div class="row">
+			<br>
+			<div class="col-sm-5 text-center wow bounceInLeft">
+				<img ng-src="images/web/web_app.png" class="img-icon img-responsive center-block" alt="apps" spinner-on-load>
+				<h2 class="grey">Mobile Apps</h2>
+				<h5>Brief overview</h5>
+				<p>
+					A mobile app is a smartphone or tablet application (programme). Unlike a mobile website, a mobile app must be downloaded and installed, typically from an app marketplace, such as the Apple App Store or Android's Google Play store. Native mobile app's are built specifically for the intended device and leverage the devices core functions like geolocators and accelerometers etc.
+				</p>
+
+				<a ng-click="mobApp = !mobApp;" class="btn btn-sm btn-grey">PROS AND CONS</a>
+
+				<div ng-if="mobApp">
+					<div class="triangle wow bounceInLeft"></div>
+					<div class="pros-cons wow bounceInLeft" data-wow-offset="10">
+						<h4>Positives</h4>
+						<ul class="pros">
+							<li> 
+								Since native apps work with the device's built-in features, they are easier to work with and also perform faster on the device.
+							</li>
+							<li>
+								Native apps get full support from the concerned app stores and marketplaces. Users can easily find and download apps of their choice from these stores.
+							</li>
+							<li>
+								Because these apps have to get the approval of the app store they are intended for, the user can be assured of complete safety and security of the app.
+							</li>
+							<li>
+								Native apps work out better for developers, who are provided the SDK and all other tools to create the app with much more ease.
+							</li>
+						</ul>
+
+						<h4>Negatives</h4>
+						<ul class="cons">
+							<li>
+								Native apps tend to be a more expensive proposition to the developer. This is especially the case for developers who would like their app to be compatible with multiple mobile devices and platforms.
+							</li>
+							<li>
+								The cost of app maintenance and app updates is also higher for native apps, especially if this app supports more than one mobile platform.
+							</li>
+							<li>
+								The process of getting the app approved at the app store can prove to be long and tedious for the developer and need not always result in success. Also, there is no guarantee that the app becomes instantly popular with users.
+							</li>
+							<li>
+								Users of different mobile devices may be using different versions of the app, which makes it difficult for the developer to maintain and offer support.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+			</div><!-- ENDS col -->
+
+			<div class="col-sm-2 text-center">
+				<img ng-src="images/icon_vs.png" class="img-icon img-responsive center-block vs" alt="icon" spinner-on-load>
+			</div><!-- ENDS col -->
+
+			<div class="col-sm-5 text-center wow bounceInRight">
+				<img ng-src="images/web/web_website.png" class="img-icon img-responsive center-block" alt="websites" spinner-on-load>
+				<h2 class="grey">Mobile Websites</h2>
+				<h5>Brief overview</h5>
+				<p>
+					A mobile website is designed specifically for the smaller screens of smartphones and tablets. It can be accessed using any mobile device's Web browser. Users simply type in the URL or click on a link to your website, and the website automatically detects the mobile device and reflows the content and layout to suit the screen size. They are usually built in conjunction with a full screen site.
+				</p>
+				<a ng-click="mobApp = !mobApp;" class="btn btn-sm btn-grey">PROS AND CONS</a>
+
+				<div ng-if="mobApp">
+					<div class="triangle wow bounceInRight"></div>
+					<div class="pros-cons wow bounceInRight" data-wow-offset="10">
+						<h4>Positives</h4>
+						<ul class="pros">
+							<li>
+								Web apps are much easier to maintain, as they have a common code base across multiple mobile platforms.
+							</li>
+							<li>
+								Web apps can be manipulated so as to be made compatible with any older mobile device.
+							</li>
+							<li>
+								Web apps do not require developers to submit their app to any app store for approval. Of course, the Apple App Store does feature a list of Web apps.
+							</li>
+							<li>
+								Since Web apps do not need to be approved by the app marketplace, they can be released at any time and in any form, as per the developer's preferences.
+							</li>
+							<li>
+								Users need not bother with visiting an app store to download Web apps or updating the same on their mobile devices.
+							</li>
+						</ul>
+
+						<h4>Negatives</h4>
+						<ul class="cons">
+							<li>
+								Mobile Web apps only have limited scope as far as accessing a mobile device's features is concerned.
+							</li>
+							<li>
+								Web apps that support multiple mobile browsers can prove to be an expensive proposition for developers, as it raises the costs of developing and maintaining them.
+							</li>
+							<li>
+								Different users work with different mobile browsers. This can make it difficult for you to maintain a record of their usage patterns and also provide support for all of them.
+							</li>
+							<li>
+								Users may sometimes find it difficult to discover a Web app, as it is not systematically listed in any app store.
+							</li>
+							<li>
+								Since there is no regularized quality control system for Web apps, users may not always be guaranteed safety and security of the app.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div><!-- ENDS col -->
+
+		</div><!-- ENDS row -->
+	</div><!-- ENDS conatiner -->
+
+	<br>
+
+	<div class="band-grey">
+
+		<div class="container wow bounceInUp">
+
+			<div class="row div-full">
+
+				<div class="col-sm-12 text-center">
+					<h2 class="grey">Our design process</h2><br>
+				</div>
+
+				<div class="col-sm-3 text-center">
+					<img ng-src="images/icon_plan.png" class="img-icon img-responsive center-block wow rotateIn" alt="planning" spinner-on-load data-wow-delay="0.2s">
+					<h4 class="grey">Planning</h4>
+					<p>
+						This is the most critical phase of any website build. Here we lay the foundations of how your website will look, function and communicate. Time spent in this early planning stage mapping out key objectives, determining your target market and developing strategies for users to contact you will significantly impact the success of your website. 
+					</p>
+					<hr class="visible-xs dashed-pad40">
+				</div><!-- ENDS col -->
+
+				<div class="col-sm-3 text-center">
+					<img ng-src="images/icon_graphics.png" class="img-icon img-responsive center-block wow rotateIn" alt="design" spinner-on-load data-wow-delay="0.2s">
+					<h4 class="grey">Designing</h4>
+					<p>
+						Here we develop the visual concepts of how your wesbite will look, including full mock ups of all the key template pages within your website. We focus on the layout of the key components (established in the planning stage), their positioning, styling, colour pallets, use of photography, typography and other design elements and features.
+					</p>
+					<hr class="visible-xs dashed-pad40">
+				</div><!-- ENDS col -->
+
+				<div class="col-sm-3 text-center">
+					<img ng-src="images/icon_code.png" class="img-icon img-responsive center-block wow rotateIn" alt="coding" spinner-on-load data-wow-delay="0.2s">
+					<h4 class="grey">Coding</h4>
+					<p>
+						Upon reaching agreement on the design of your new website, we then convert your mock ups into HTML and CSS code allowing them to function within a web browser. Additional functionality such as special affects, forms, dynamic data derived from a database or a fully integrated CMS (content management system) are also implemented here.
+					</p>
+					<hr class="visible-xs dashed-pad40">
+				</div><!-- ENDS col -->
+
+				<div class="col-sm-3 text-center">
+					<img ng-src="images/icon_bus_websites.png" class="img-icon img-responsive center-block wow rotateIn" alt="going live" spinner-on-load data-wow-delay="0.2s">
+					<h4 class="grey">Going Live!</h4>
+					<p>
+						Finally we test all functions and components of your site including forms, dynamic data delivery, content management, cross browser compatibilty, the responsiveness and appearance of your site on different devices such as smart phones and tablets. Once this has been completed we configure the hosting environment and launch your site live!
+					</p>
+				</div><!-- ENDS col -->
+			</div><!-- ENDS row -->
+		</div><!-- ENDS conatiner -->
+	</div><!-- ENDS band-grey -->
+
+
+
+	<div class="band" id="gallery">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-12 text-center">
+					<h2 class="grey">Recent work</h2><br>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<!-- LACIGALE -->
+					<article class="article">
+						<img ng-src="images/web/web_browser1.png" class="img-icon img-responsive center-block" alt="lacigale" spinner-on-load>
+						<h5 class="grey">LaCigale French Markets</h5>
+					</article>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<!-- EVENTS GROUP -->
+					<article class="article">
+						<img ng-src="images/web/web_browser8.png" class="img-icon img-responsive center-block" alt="The Events Group" spinner-on-load>
+						<h5 class="grey">The Events Group</h5>
+					</article>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<!-- ATHLETICS NZ -->
+					<article class="article">
+						<img ng-src="images/web/web_browser3.png" class="img-icon img-responsive center-block" alt="ANZ Rankings" spinner-on-load>
+						<h5 class="grey">Athletics NZ Rankings</h5>
+					</article>
+				</div><!-- ENDS col -->
+
+			</div><!-- ENDS row -->
+
+
+
+
+			<div class="row">
+
+				<div class="col-sm-4 text-center">
+					<!-- CHESTER CONSULTING -->
+					<article class="article">
+						<img ng-src="images/web/web_browser5.png" class="img-icon img-responsive center-block" alt="Chester Consultants" spinner-on-load>
+						<h5 class="grey">Chester Consultants</h5>
+					</article>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<!-- NORTSHORT -->
+					<article class="article">
+						<img ng-src="images/web/web_browser6.png" class="img-icon img-responsive center-block" alt="Northsport Coaching" spinner-on-load>
+						<h5 class="grey">NorthSport Coaching</h5>
+					</article>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<!-- SYNERGY -->
+					<article class="article">
+						<img ng-src="images/web/web_browser4.png" class="img-icon img-responsive center-block" alt="Synergy Build Group" spinner-on-load>
+						<h5 class="grey">Synergy Build Group</h5>
+					</article>
+				</div><!-- ENDS col -->
+
+
+
+			</div><!-- ENDS row -->
+
+				<div class="row">
+					<div class="col-sm-12">
+						<img src="images/web/show_lacigale.png" class="img-responsive center-block shadow-large">
+						<br><br>
+						<img src="images/web/show_events.png" class="img-responsive center-block shadow-large">
+						<br><br>
+						<img src="images/web/show_track.png" class="img-responsive center-block shadow-large">
+						<br><br>
+						<img src="images/web/show_anz.png" class="img-responsive center-block shadow-large">
+						<br><br>
+						<img src="images/web/show_northsport.png" class="img-responsive center-block shadow-large">
+					</div>
+				</div><!--ENDS row-->
+
+			<div class="pad">
+			<button class="btn btn-sm btn-grey back-to-top center-block" scroll-to-item scroll-to="#top-scroll">Back to Top</button><!-- directive - BACK TO TOP --></div>
+			
+
+		</div><!-- ENDS container -->
+	</div><!-- ENDS band -->
+</div><!-- ENDS main-container -->
+
+
+<div ng-include="'views/banners/footer.html'"></div>
