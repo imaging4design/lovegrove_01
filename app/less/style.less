@@ -417,13 +417,13 @@ a:focus {
 }
 .navbar-inverse .navbar-brand, 
 .navbar-inverse .navbar-brand:active {
-	background: url('../images/LD_Logo_Small_a.png') no-repeat center center @colYellow;
+	background: url('../images/LD.svg') no-repeat center center @colYellow;
 	width: 60px;
 	height: 53px;
 }
 .navbar-inverse .navbar-brand:hover, 
 .navbar-inverse .navbar-brand:focus {
-	background: url('../images/LD_Logo_Small_b.png') no-repeat center center #02050A;
+	background: url('../images/LD_hover.svg') no-repeat center center #02050A;
 }
 .navbar-nav > li > a,
 .navbar-nav > li > a:hover {
@@ -605,6 +605,104 @@ figure:hover:before {
 
 /*
 |-----------------------------------------------------------------------------------------------------------------
+| BOOTSTRAP OVERIDES!
+|-----------------------------------------------------------------------------------------------------------------
+*/
+.row-no-padding {
+	[class*="col-"] {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------------
+| CAROUSEL
+|-----------------------------------------------------------------------------------------------------------------
+*/
+.carousel.slide {
+	margin: 0 auto;
+	padding: 0;
+	background-image: url('../images/web/iPhone.png');
+    background-size: 320px 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    max-width: 340px;
+    height: auto;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	background: none;
+}
+
+.carousel {
+	h3 {
+		font-weight: 300;
+		position: absolute;
+		width: 100%;
+		top: 30px;
+		text-align: center;
+	}
+}
+
+
+.carousel-caption {
+	bottom:0;
+	left: 19%;
+	right: 20%;
+	color: #333;
+	background: rgba(255,255,255, 0.85);
+	padding: 10px 20px 0 20px;
+	text-align: center;
+	text-shadow: none;
+	border: solid 1px #EBEBEB;
+	&:hover {
+		color: #FFF !important;
+		background: rgba(0,0,0, 0.75);
+		transition: background 1s ease-in;
+		cursor: pointer;
+	}
+	p {
+		font-size: 12px;
+		line-height: 1.4;
+	}
+}
+
+.item {
+	height:600px;
+	.slide-up {
+		height: 100px;
+		width: 600px;
+	}
+	img {
+		opacity: 0;
+	}
+	.carousel-caption {
+		opacity: 0;
+	}
+}
+.item.active {
+	height: 600px;
+	.slide-up {
+		height: 0;
+		width: 600px;
+		transition: all .3s cubic-bezier(.42,0,.58,1);
+	}
+	img {
+		opacity: 1;
+		transition: all .7s ease-out;
+	}
+	.carousel-caption {
+		opacity: 1;
+		transition: all .3s ease-out;
+	}
+}
+
+
+/*
+|-----------------------------------------------------------------------------------------------------------------
 | MISC
 |-----------------------------------------------------------------------------------------------------------------
 */
@@ -708,20 +806,10 @@ button:hover
 	transition:all linear 0.0s;
 	opacity:0;
 }
-
-
-
-
 .view-animate-container {
 	position:relative;
-	/*height:100px!important;
-	background:white;
-	border:1px solid black;
-	height:40px;
-	overflow:hidden;*/
 	-webkit-backface-visibility:hidden;
 }
-
 .view-animate {
 	padding:0;
 }
@@ -731,11 +819,9 @@ button:hover
 	-moz-transition: all 0.3s ease-in;
 	-o-transition: all 0.3s ease-in;
 	transition: all 0.3s ease-in;
-
 	display:block;
 	width:100%;
 	border:none;
-
 	position:absolute;
 	top:0;
 	left:0;
@@ -751,16 +837,8 @@ button:hover
 	left:0;
 }
 .view-animate.ng-leave.ng-leave-active {
-	left:-100%;
+	left:-200%;
 }
-
-
-/*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    min-height: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: relative;
-}*/
 
 
 
@@ -782,6 +860,16 @@ button:hover
 */
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 320px) and (max-width: 367px) {
+
+	.pad-15 {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 368px) and (max-width: 767px) {
@@ -859,14 +947,14 @@ button:hover
 
 	nav.menu-bar-small.navbar-inverse .navbar-brand, 
 	.navbar-inverse .navbar-brand:active  {
-		background: url('../images/LD_Logo_Small_a.png') no-repeat center center @colYellow;
+		background: url('../images/LD.svg') no-repeat center center @colYellow;
 		width: 60px;
 		height: 53px;
 	}
 
 	nav.menu-bar-large.navbar-inverse .navbar-brand, 
 	.navbar-inverse .navbar-brand:active  {
-		background: url('../images/LD_Logo_Large_a.png') no-repeat center center @colYellow;
+		background: url('../images/LD.svg') no-repeat center center @colYellow;
 		width: 90px;
 		height: 81px;
 		margin-top:-14px;
@@ -874,13 +962,13 @@ button:hover
 
 	nav.menu-bar-small.navbar-inverse .navbar-brand:hover, 
 	.navbar-inverse .navbar-brand:focus .navbar-brand:active {
-		background: url('../images/LD_Logo_Small_b.png') no-repeat center center #02050A;
+		background: url('../images/LD_hover.svg') no-repeat center center #02050A;
 		margin-top:0;
 	}
 
 	nav.menu-bar-large.navbar-inverse .navbar-brand:hover, 
 	.navbar-inverse .navbar-brand:focus .navbar-brand:active {
-		background: url('../images/LD_Logo_Large_b.png') no-repeat center center #02050A;
+		background: url('../images/LD_hover.svg') no-repeat center center #02050A;
 	}
 
 	nav.menu-bar-small {
